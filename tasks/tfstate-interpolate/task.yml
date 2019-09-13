@@ -1,0 +1,22 @@
+---
+# Based on Simon O'Brien's work at https://github.com/ob1-sc/pcf-aws-automation
+platform: linux
+
+inputs:
+- name: tf_state  # contains the terraform state file
+- name: tasks     # contains the product configuration file
+- name: texplate  # contains the texplate binary
+- name: jq        # contains the jq binary
+- name: files     # contains the files to interpolate
+
+outputs:
+- name: interpolated-files # contains all the *.yml files from `files/` input but after interpolation
+
+params:
+  # path the contains the files to read from
+  # this is a space separated list of directories
+  # the paths are all evaluated relative to files/
+  INTERPOLATION_PATHS: '.'
+
+run:
+  path: tasks/tasks/tfstate-interpolate/task.sh
