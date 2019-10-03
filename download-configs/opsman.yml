@@ -4,3 +4,4 @@ pivnet-api-token: ((pivnet-token))
 ## otherwise they'll be interpreted as a YAML anchor.
 pivnet-file-glob: "ops-manager-azure-*.yml"
 pivnet-product-slug: ops-manager
+product-version-regex: ^2\.6\..*$
