@@ -1,0 +1,6 @@
+---
+pivnet-api-token: ((pivnet-token))
+## Note that file globs must be quoted if they start with *;
+## otherwise they'll be interpreted as a YAML anchor.
+pivnet-file-glob: "*.pivotal"
+pivnet-product-slug: pivotal-container-service
