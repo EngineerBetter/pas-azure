@@ -5,3 +5,5 @@ pivnet-api-token: ((pivnet-token))
 pivnet-file-glob: "*.pivotal"
 pivnet-product-slug: pivotal-container-service
 product-version-regex: ^1\.5\..*$
+
+stemcell-iaas: azure
