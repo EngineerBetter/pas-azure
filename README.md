@@ -4,6 +4,10 @@ An example of using [Platform Automation](https://docs.pivotal.io/platform-autom
 
 This repo contains non-foundation-specific files. Foundation-specific (or "promotable") files can be found in [pks-azure-config](https://github.com/crsimmons/pks-azure-config).
 
+## Prerequisites
+
+You must have an Azure storage account set up manually with two containers: `pivnet` and `resources`.
+
 ## Fetch Dependencies
 
 A pipeline for grabbing blobs from Pivotal Network and storing them in Azure Blobstore for use in other pipelines.
