@@ -4,6 +4,6 @@ pivnet-api-token: ((pivnet-token))
 ## otherwise they'll be interpreted as a YAML anchor.
 pivnet-file-glob: "*.pivotal"
 pivnet-product-slug: pivotal-container-service
-product-version-regex: ^1\.4\..*$
+product-version-regex: ^1\.5\..*$
 
 stemcell-iaas: azure

@@ -89,7 +89,7 @@ resources:
   type: azure-blobstore
   source:
     <<: *azure-params
-    regexp: bosh-stemcell-(.*)-azure-hyperv-ubuntu-xenial-go_agent.tgz
+    regexp: pks-stemcells/bosh-stemcell-(.*)-azure-hyperv-ubuntu-xenial-go_agent.tgz
 
 - name: daily
   type: time
