@@ -54,6 +54,7 @@ This task is ~~stolen~~ adapted from [Simon O'Brien's work](https://github.com/o
 In order to not clash with credhub vars the placeholders used by tfstate-interpolate are different.
 
 credhub-interpolate: `((parameter))`
+
 tfstate-interpolate: `{{.parameter}}`
 
 Parameters must be defined as outputs in your terraform.
