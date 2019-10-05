@@ -1,0 +1,17 @@
+platform: linux
+
+inputs:
+- name: terraforming-azure-tarball
+- name: configuration-repo
+
+outputs:
+- name: terraforming-azure
+
+run:
+  path: bash
+  args:
+  - -euc
+  - |
+    version=$(cat terraforming-azure-tarball/version)
+    tar xzf terraforming-azure-tarball/"terraforming-azure-v${version}.tar.gz" -C terraforming-azure
+    cp configuration-repo/terraform/* terraforming-azure/terraforming/terraforming-pks/
