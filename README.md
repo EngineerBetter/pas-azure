@@ -8,7 +8,7 @@ This repo contains non-foundation-specific files. Foundation-specific (or "promo
 
 You must have an Azure storage account set up manually with two containers: `pivnet` and `resources`.
 
-## Fetch Dependencies
+## Fetch Dependencies Pipeline
 
 A pipeline for grabbing blobs from Pivotal Network and storing them in Azure Blobstore for use in other pipelines.
 
@@ -58,3 +58,7 @@ credhub-interpolate: `((parameter))`
 tfstate-interpolate: `{{.parameter}}`
 
 Parameters must be defined as outputs in your terraform.
+
+### extract-tf-files
+
+Extracts the terraform files out of [terraforming-azure](https://github.com/pivotal-cf/terraforming-azure) and adds some custom terraform files in.
