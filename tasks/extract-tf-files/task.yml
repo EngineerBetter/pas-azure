@@ -14,4 +14,4 @@ run:
   - |
     version=$(cat terraforming-azure-tarball/version)
     tar xzf terraforming-azure-tarball/"terraforming-azure-v${version}.tar.gz" -C terraforming-azure
-    cp -r configuration-repo/terraform/ terraforming-azure/terraforming/
+    cp -r configuration-repo/terraform/* terraforming-azure/terraforming/
