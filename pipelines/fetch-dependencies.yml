@@ -83,7 +83,7 @@ resources:
   type: azure-blobstore
   source:
     <<: *azure-params
-    regexp: pivotal-container-service-(.*).pivotal
+    regexp: cf-(.*).pivotal
 
 - name: pas-stemcell
   type: azure-blobstore
