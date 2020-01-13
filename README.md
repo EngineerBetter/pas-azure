@@ -1,6 +1,6 @@
 # PAS Azure
 
-An example of using [Platform Automation](https://docs.pivotal.io/platform-automation/v4.2/index.html) to deploy [PAS](https://pivotal.io/platform/pivotal-application-service) on Microsoft Azure.
+An example of using [Platform Automation](https://docs.pivotal.io/platform-automation/v4.2) to deploy [PAS](https://pivotal.io/platform/pivotal-application-service) on Microsoft Azure.
 
 This repo contains non-foundation-specific files. Foundation-specific (or "promotable") files can be found in [pas-azure-config](https://github.com/EngineerBetter/pas-azure-config).
 
