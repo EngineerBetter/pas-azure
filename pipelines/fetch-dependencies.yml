@@ -48,7 +48,7 @@ resources:
   type: git
   source:
     private_key: ((github_private_key))
-    uri: git@github.com:crsimmons/pas-azure.git
+    uri: git@github.com:EngineerBetter/pas-azure.git
     branch: master
 
 - name: platform-automation-pivnet
