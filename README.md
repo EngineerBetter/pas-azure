@@ -37,7 +37,7 @@ For interpolation into config files ensure the following parameters are set in c
 
 ### merge-files
 
-In my experience the [credhub-interpolate job](https://docs.pivotal.io/platform-automation/v4.0/pipelines/single-product.html#credhub-interpolate-job) in the Platform Automation docs causes confusion by _only_ outputting files that have had values interpolated into them.
+In my experience the [credhub-interpolate job](https://docs.pivotal.io/platform-automation/v4.2/pipelines/single-product.html#credhub-interpolate-job) in the Platform Automation docs causes confusion by _only_ outputting files that have had values interpolated into them.
 
 For example, if the [pas-azure-config](https://github.com/EngineerBetter/pas-azure-config) were to be run through the credhub-interpolate job the result would be just the yaml files. None of the terraform files would be present as they weren't interpolated. This leads to confusion when deciding which resource to use as an input into tasks.
 
