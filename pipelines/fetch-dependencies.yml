@@ -48,7 +48,7 @@ resources:
   type: git
   source:
     private_key: ((github_private_key))
-    uri: git@github.com:crsimmons/pks-azure.git
+    uri: git@github.com:crsimmons/pas-azure.git
     branch: master
 
 - name: platform-automation-pivnet
@@ -79,17 +79,17 @@ resources:
     <<: *azure-params
     regexp: ops-manager-azure-(.*).yml
 
-- name: pks-product
+- name: pas-product
   type: azure-blobstore
   source:
     <<: *azure-params
     regexp: pivotal-container-service-(.*).pivotal
 
-- name: pks-stemcell
+- name: pas-stemcell
   type: azure-blobstore
   source:
     <<: *azure-params
-    regexp: pks-stemcells/bosh-stemcell-(.*)-azure-hyperv-ubuntu-xenial-go_agent.tgz
+    regexp: pas-stemcells/bosh-stemcell-(.*)-azure-hyperv-ubuntu-xenial-go_agent.tgz
 
 - name: daily
   type: time
@@ -124,22 +124,22 @@ jobs:
       params:
         file: downloaded-product/*
 
-- name: fetch-pks
+- name: fetch-pas
   plan:
   - *set-up-job
-  - task: download-pks-product-and-stemcell
+  - task: download-pas-product-and-stemcell
     image: platform-automation-image
     file: platform-automation-tasks/tasks/download-product.yml
     params:
-      CONFIG_FILE: download-configs/pks.yml
+      CONFIG_FILE: download-configs/pas.yml
     input_mapping:
       config: interpolated-files
     output_mapping:
-      downloaded-stemcell: pks-stemcell
+      downloaded-stemcell: pas-stemcell
   - in_parallel:
-      - put: pks-product
+      - put: pas-product
         params:
           file: downloaded-product/*.pivotal
-      - put: pks-stemcell
+      - put: pas-stemcell
         params:
-          file: pks-stemcell/*.tgz
+          file: pas-stemcell/*.tgz
